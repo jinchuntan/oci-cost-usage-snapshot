@@ -1,2 +1,21 @@
-# oci-cost-usage-snapshot
-Built a standalone Python tool using the OCI SDK that captures a point in time snapshot of OCI usage. The tool collects resource metadata (Compute and Storage where available), generates structured JSON and Markdown reports, and uploads the artifacts to OCI Object Storage. Evidence includes execution output and the uploaded report objects in OCI.
+# OCI Cost & Usage Snapshot Analyzer
+
+This project captures a point-in-time snapshot of OCI resource usage
+focused on Compute instances and Block Volumes, and uploads structured
+reports to OCI Object Storage.
+
+## Features
+
+- Read-only collection of OCI resources
+- JSON + Markdown report generation
+- Object Storage upload
+- No billing or risky permissions required
+
+## Setup
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+copy .env.example .env
+```
